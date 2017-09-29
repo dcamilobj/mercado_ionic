@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Mercado Search 'dcamilobj'
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Item</ion-label>
+    <ion-input type="text" value="" [(ngModel)]="item"></ion-input>
+  </ion-item>
+  <button ion-button block (click)="search(item)">Search</button>
+</ion-content>
