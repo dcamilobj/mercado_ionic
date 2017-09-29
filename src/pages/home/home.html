@@ -12,4 +12,14 @@
     <ion-input type="text" value="" [(ngModel)]="item"></ion-input>
   </ion-item>
   <button ion-button block (click)="search(item)">Search</button>
+  <ion-list>
+    <ion-item *ngFor="let result of item_info.results">
+        <ion-thumbnail item-start>
+          <img src="{{result.thumbnail}}" alt="server-error">
+        </ion-thumbnail>
+        <h2>{{result.title}}</h2>
+        <p>{{result.price}} {{result.currency_id}}</p>
+        <!--<button ion-button clear item-end>View</button>-->
+    </ion-item>
+  </ion-list>
 </ion-content>
