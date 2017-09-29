@@ -12,13 +12,12 @@ export class HomePage {
 
   constructor(public _mercado_libre: MercadoLibreProvider) {
   }
-
   search(item)
   {
-    console.log("Sisas papo");
     this._mercado_libre.searchItem(item).then((data)=>{
     this.item_info = data;
-    console.log(this.item_info);
+  }).catch((error)=>{
+    console.log(error)
   })
   }
 }

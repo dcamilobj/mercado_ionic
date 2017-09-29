@@ -17,7 +17,6 @@ export class MercadoLibreProvider {
   /*Method to search by item on the app*/
   searchItem(item:string)
   {
-    console.log("Llegué acá")
     return new Promise((resolve, reject)=>{
       var url:string = this.apiLink + item
       this.http.get(url).map(res=>res.json()).subscribe(
